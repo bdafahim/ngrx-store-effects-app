@@ -24,7 +24,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production
 import { AppComponent } from './containers/app/app.component';
 
 // routes
-export const ROUTES: Routes = [
+export const  ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'products' },
   {
     path: 'products',
