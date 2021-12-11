@@ -4,6 +4,7 @@ import { Pizza } from '../../models/pizza.model';
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
 import * as fromStore from '../../store'
+import {LoadPizzas} from "../../store";
 
 @Component({
   selector: 'products',
@@ -36,5 +37,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
       this.pizzas$  = this.store.select<any>(fromStore.getAllPizzas);
+      this.store.dispatch(new fromStore.LoadPizzas())
   }
 }
