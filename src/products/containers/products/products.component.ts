@@ -36,7 +36,7 @@ export class ProductsComponent implements OnInit {
   constructor(private store: Store<fromStore.ProductState>) {}
 
   ngOnInit() {
-      this.pizzas$  = this.store.select<any>(fromStore.getAllPizzas);
+        this.pizzas$  = this.store.select<any>(fromStore.getAllPizzas);
       this.store.dispatch(new fromStore.LoadPizzas())
   }
 }
